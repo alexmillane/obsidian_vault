@@ -82,7 +82,36 @@ wget 'https://api.ngc.nvidia.com/v2/models/nvidia/tao/peoplesemsegnet/versions/d
 /opt/nvidia/tao/tao-converter -k tlt_encode -d 3,544,960 -p input_1:0,1x3x544x960,1x3x544x960,1x3x544x960 -t int8 -c peoplesemsegnet_vanilla_unet_dynamic_etlt_int8.cache -e 1/model.plan -o argmax_1 peoplesemsegnet_vanilla_unet_dynamic_etlt_int8_fp16.etlt
 
 cp /workspaces/isaac_ros-dev/src/isaac_ros_image_segmentation/resources/peoplesemsegnet_shuffleseg_config.pbtxt config.pbtxt
+```
 
+Modify the config to rename the model name and the input name such that it looks like
+```
+name: "peoplesemsegnet"
+platform: "tensorrt_plan"
+max_batch_size: 0
+input [
+  {
+    name: "input_1:0"
+    data_type: TYPE_FP32
+    dims: [ 1, 3, 544, 960 ]
+  }
+]
+output [
+  {
+    name: "argmax_1"
+    data_type: TYPE_INT32
+    dims: [ 1, 544, 960, 1 ]
+  }
+]
+version_policy: {
+  specific {
+    versions: [ 1 ]
+  }
+}
+```
+
+Launch:
+```
 ros2 launch isaac_ros_unet isaac_ros_unet_triton.launch.py model_name:=peoplesemsegnet model_repository_paths:=['/workspaces/isaac_ros-dev/models'] input_binding_names:=['input_1:0'] output_binding_names:=['argmax_1'] network_output_type:='argmax'
 
 ros2 bag play rosbag2_2022_11_29-16_41_57 -l --qos-profile-overrides-path qos_overrides.yaml
