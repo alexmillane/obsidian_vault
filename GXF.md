@@ -26,7 +26,7 @@ components:
 ```
 
 
-## Prerequisits
+## Prerequisites
 Must be components
 
 ## Unique IDs
