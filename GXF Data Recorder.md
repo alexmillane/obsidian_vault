@@ -27,6 +27,9 @@ Things I've changed from the launch command in confluence:
 * Removed the last param regarding aws crap
 * Changed the location of the place to save
 
+## NOTE!!
+Need to change the output folder to somewhere on the SSD. By default `/media/orin_ssd/recordings` is on the soldiered on storage.
+
 ## Playback command
 We run the `data_replayer` as:
 ```bash

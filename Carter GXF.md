@@ -32,20 +32,12 @@ cd ~/deploy/lgulich/robot_remote_control_segway-pkg
 ./apps/amr/robot_remote_control/robot_remote_control_segway
 ```
 
+
+## Run the open-loop nvblox app
+To deply the open loop app
+```bash
+./../engine/engine/build/deploy.sh -h carter-v23-9.client.nvidia.com -d jetpack50 -p //extensions/nvblox/apps/carter_open_loop:carter_open_loop-pkg
+```
+
 ## Record some fucking data bitches
-**First attempt**: Run the `nvblox_realsense`
-```bash
-./../engine/engine/build/deploy.sh -h carter-v23-9.client.nvidia.com -d jetpack50 -p //extensions/nvblox/apps/realsense:nvblox_realsense-pkg
-```
-
-**Second attempt** Run the `data_recorder` 
-
-```bash
-cd ~/deploy/alex/data_recorder-pkg
-./apps/amr/data_recorder/data_recorder
-```
-
-```bash
-./../engine/engine/build/deploy.sh -h carter-v23-9.client.nvidia.com -d jetpack50 -p //apps/amr/data_recorder:data_recorder-pkg
-```
-> None of the above attempts worked because of issues with tensor stream resize.
+[[GXF Data Recorder]]

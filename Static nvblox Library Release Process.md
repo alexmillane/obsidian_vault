@@ -28,14 +28,14 @@ I make a new folder called `artifact`. Inside it I drag the headers from x86 ins
 
 Zip up the subfolders *inside* of the artifact directory. Rename the zip file to reflect the version number. This time I did `nvblox_alpha6.zip`.
 
-> **Note:** make sure that you 
+> **Note:** make sure that you zip the folders *inside* the version folder. Double clicking on the zip folder should show you the lib folders in the first level. i.e. `lib_x86_64` should be viewable immediately inside.
 
 ## Upload the Artifact
 Then, upload the zip file to artifactory by:
 
 1) Navigate to the `sw-isaac-sdk-generic-local` artifacts by going to the URL:
 ```
-https://urm.nvidia.com/ui/repos/tree/General/sw-isaac-sdk-generic-local
+*https://urm.nvidia.com/ui/repos/tree/General/sw-isaac-sdk-generic-local*
 ```
 2) Upload the asset by clicking the "Deploy" button and then dragging the zip folder into the box.
 3) Wait for upload
@@ -97,3 +97,35 @@ cmake .. -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_INSTALL_PREFIX=/home/alex/
   
   
 
+# Test New Library Before Deployment
+
+### nvblox lib side
+Check out your development branch in the `~/trunk/nvblox_static_lib`
+```bash
+cd ~/trunk/nvblox_static_lib/nvblox/scripts
+./make_deployable_artifact
+```
+Copy the results it to the staging area
+```bash
+cp -r ../nvblox/install/lib/ ../../artifact_for_deployment/testing/lib_x86_64
+cp -r ../nvblox/install/include/ ../../artifact_for_deployment/testing/include
+```
+
+### Mono-repo side
+Replace the nvblox target with a local resource:
+```python
+isaac_new_local_repository(
+	name = "nvblox",
+	build_file = clean_dep("//third_party:nvblox.BUILD"),
+	path = "/home/alex/trunk/nvblox_static_lib/artifact_for_deployment/testing",
+	# sha256 = "9062f4629048185f8c70588fb6d2f7e6d45ec9e0bf1868c2c39b4b34689c3722",
+	licenses = ["https://github.com/nvidia-isaac/nvblox/blob/public/LICENSE"],
+)
+```
+Unfortunately bazel can't detect that something has changed so you have to force it to do a sync 
+
+You can force an update by adding a wrong SHA. This *may* force an update. Needs testing.
+```bash
+
+```
+>Not sure if the above statements are actually true with the local repo. **Update next time you check this!!!**
