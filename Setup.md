@@ -40,5 +40,8 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-right "['<Prima
 
 # Obsidian
 Currently I'm syncing my obsidian with git. 
+### App Image
+Obsidian is delivered as an app image which makes it annoying to launch. I use [AppImageLuancher](https://www.makeuseof.com/add-appimages-to-linux-system-menu/) to improve this experience.
+
 ## Obsidian git plugin (abandoned)
 I abandoned it because it required creating a wallet to use the plugin. If you wanna pick it back up again. Use this link [here](https://publish.obsidian.md/git-doc/04+Authentication) and [here](https://docs.kde.org/trunk5/en/kwalletmanager/kwallet5/introduction.html).
