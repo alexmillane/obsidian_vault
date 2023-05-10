@@ -10,3 +10,19 @@ So to develop using pytorch inside the container, as to use vscode features like
 Notes:
 - I still don't have autocomplete working. For now I'm giving up.
 - Going back to refactoring.
+
+
+# New (Native) Installation
+I decided to install natively using `conda`. I also had to install 
+
+## Conda
+Follow the instuctions on the pytorch installation selection panel [here](https://pytorch.org/get-started/locally/) and select conda install. Install conda.
+
+To activate the base conda environment
+```bash
+conda activate
+```
+
+## C++ libtorch
+Use the installation selection panel to download the zip file containing `libtorch`. Installation for me so far has been just unziping it into my `standalone_libs`  folder.
+> Revision: Turns out you can just link against the `libtorch` brought along with the conda installation. So I am now using that
