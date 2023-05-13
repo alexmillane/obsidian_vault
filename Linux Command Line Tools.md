@@ -1,4 +1,14 @@
 
+## Disk Usage
+Space used by a folder "disk used"
+```bash
+du -sh .
+```
+Space free on a device "disk free"
+```bash
+df -h .
+```
+
 ## Less
 For viewing long files
 ```bash
