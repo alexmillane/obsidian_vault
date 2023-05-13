@@ -76,3 +76,9 @@ For example
 bazel run //extensions/vslam/apps:_gxflint_rs_tracker
 ```
 
+
+## Cpp Lint
+Bazel creates cpp lint targets:
+```bash
+bazel run //extensions/nvblox/tests:_cpplint_nvblox_pod_replay_lib
+```

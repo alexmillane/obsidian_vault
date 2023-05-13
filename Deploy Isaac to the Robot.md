@@ -12,3 +12,15 @@ Build for ARM
 
 **Deploy to ARM:**
 
+
+# Common deploy
+
+Open Loop
+```bash
+./../engine/engine/build/deploy.sh -h carter-v23-9.client.nvidia.com -d jetpack51 -p //extensions/nvblox/apps/carter_open_loop:carter_open_loop-pkg
+```
+
+Closed Loop
+```bash
+./../engine/engine/build/deploy.sh -h carter-v23-9.client.nvidia.com -d jetpack51 -p //apps/amr/navigation_stack:carter_demo_occupancy_nvblox_environment_zurich-pkg
+```
