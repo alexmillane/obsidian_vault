@@ -17,7 +17,11 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 # fcf
-TODO
+Taken from lionel clemens chat
+```bash
+git clone --depth 1 [https://github.com/junegunn/fzf.git](https://github.com/junegunn/fzf.git) ~/.fzf
+~/.fzf/install --all
+```
 
 # Ubuntu
 ## Workspaces

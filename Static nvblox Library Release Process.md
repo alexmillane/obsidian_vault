@@ -35,7 +35,7 @@ Then, upload the zip file to artifactory by:
 
 1) Navigate to the `sw-isaac-sdk-generic-local` artifacts by going to the URL:
 ```
-*https://urm.nvidia.com/ui/repos/tree/General/sw-isaac-sdk-generic-local*
+https://urm.nvidia.com/ui/repos/tree/General/sw-isaac-sdk-generic-local
 ```
 2) Upload the asset by clicking the "Deploy" button and then dragging the zip folder into the box.
 3) Wait for upload
@@ -124,8 +124,6 @@ isaac_new_local_repository(
 ```
 Unfortunately bazel can't detect that something has changed so you have to force it to do a sync 
 
-You can force an update by adding a wrong SHA. This *may* force an update. Needs testing.
-```bash
+You can force an update by adding a wrong SHA. *I think that this* forces an update. Needs testing.
 
-```
 >Not sure if the above statements are actually true with the local repo. **Update next time you check this!!!**
