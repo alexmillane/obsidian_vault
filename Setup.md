@@ -49,3 +49,11 @@ Obsidian is delivered as an app image which makes it annoying to launch. I use [
 
 ## Obsidian git plugin (abandoned)
 I abandoned it because it required creating a wallet to use the plugin. If you wanna pick it back up again. Use this link [here](https://publish.obsidian.md/git-doc/04+Authentication) and [here](https://docs.kde.org/trunk5/en/kwalletmanager/kwallet5/introduction.html).
+
+
+# Bat
+Modern `cat`. Install as here: https://github.com/sharkdp/bat#installation. Need to remap `batcat` to `bat` as described.
+
+## Modern Linux
+A bunch of things I should install: https://github.com/ibraheemdev/modern-unix
+
