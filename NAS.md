@@ -1,3 +1,11 @@
+
+## Access
+To access via the web interface go to: https://find.synology.com/
+user: `alex`
+pass: `<new secure pass>`
+
+
+## Setting up
 Notes I made while setting up my NAS
 
 * Synology on linux mapped folders [here](https://kb.synology.com/en-us/DSM/tutorial/How_to_access_files_on_Synology_NAS_within_the_local_network_NFS)
