@@ -2,7 +2,7 @@
 # Testing
 
 ```bash
-colcon test --packages-select nvblox_nav2
+colcon test --packages-select nvblox_ros
 colcon test-result --verbose
 colcon test-result --delete-yes
 ```

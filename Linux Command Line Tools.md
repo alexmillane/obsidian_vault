@@ -21,3 +21,14 @@ You can also pipe things to it
 my_command_producing crap | less
 ```
 
+## Find
+
+```bash
+find . -name "foo*"
+```
+
+## Dpkg
+Sometimes I have issues with 
+```bash
+apt --fix-broken install
+```
