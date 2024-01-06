@@ -5,13 +5,13 @@ as well as the blind75 list here: https://leetcode.com/discuss/general-discussio
 ## Array
 - [x] Two Sum
 - [x] Best Time to Buy and Sell Stock
-- [ ] Contains Duplicate
-- [ ] Product of Array Except Self
+- [x] Contains Duplicate
+- [x] Product of Array Except Self
 - [ ] Maximum Subarray
 - [ ] Maximum Product Subarray
 - [ ] Find Minimum in Rotated Sorted Array
 - [ ] Search in Rotated Sorted Array
-- [ ] 3 Sum
+- [x] 3 Sum
 - [ ] Container With Most Water
 
 ## Binary
@@ -39,7 +39,7 @@ as well as the blind75 list here: https://leetcode.com/discuss/general-discussio
 - [x] Course Schedule
 - [ ] Pacific Atlantic Water Flow
 - [ ] Number of Islands
-- [ ] Longest Consecutive Sequence
+- [x] Longest Consecutive Sequence
 - [ ] Alien Dictionary (Leetcode Premium)
 - [ ] Graph Valid Tree (Leetcode Premium)
 - [ ] Number of Connected Components in an Undirected Graph (Leetcode Premium)
@@ -52,7 +52,7 @@ as well as the blind75 list here: https://leetcode.com/discuss/general-discussio
 - [ ] Meeting Rooms II (Leetcode Premium)
 
 ## Linked List
-- [ ] Reverse a Linked List
+- [x] Reverse a Linked List
 - [ ] Detect Cycle in a Linked List
 - [ ] Merge Two Sorted Lists
 - [ ] Merge K Sorted Lists
@@ -60,7 +60,7 @@ as well as the blind75 list here: https://leetcode.com/discuss/general-discussio
 - [ ] Reorder List
 
 ## Matrix
-- [ ] Set Matrix Zeroes
+- [x] Set Matrix Zeroes
 - [ ] Spiral Matrix
 - [ ] Rotate Image
 - [ ] Word Search
@@ -71,16 +71,16 @@ as well as the blind75 list here: https://leetcode.com/discuss/general-discussio
 - [ ] Minimum Window Substring
 - [ ] Valid Anagram
 - [ ] Group Anagrams
-- [ ] Valid Parentheses
+- [x] Valid Parentheses
 - [ ] Valid Palindrome
 - [ ] Longest Palindromic Substring
 - [ ] Palindromic Substrings
 - [ ] Encode and Decode Strings (Leetcode Premium)
 
 ## Tree
-- [ ] Maximum Depth of Binary Tree
-- [ ] Same Tree
-- [ ] Invert/Flip Binary Tree
+- [x] Maximum Depth of Binary Tree
+- [x] Same Tree
+- [x] Invert/Flip Binary Tree
 - [ ] Binary Tree Maximum Path Sum
 - [ ] Binary Tree Level Order Traversal
 - [ ] Serialize and Deserialize Binary Tree
