@@ -1,10 +1,15 @@
 # OSMO user guide
 
-https://docs.google.com/document/d/1CWPEh3JP80KAjp2jyx1D--2UtbdsPpFGHx2vjiQ7qn0/edit# 
+https://us-west-2-aws.osmo.nvidia.com/docs/index.html
 
 ## NGC URL
 https://catalog.ngc.nvidia.com/
 
+# Run nvblox core benchmark
+```
+osmo workflow submit replica.yaml --set cpu=8 os=linux platform_type=x86 memory=100Gi disk=600Gi image=nvcr.io/nvstaging/isaac-amr/nvblox-nightly-x86_64:latest workflow_name=nvblox_replica_testing kpi_namespace=nvblox/core/aarch64/testing
+```
+> Note that you have to remove the ssa secrets line from the workflow file in order to run it yourself.
 # OSMO datasets
 Upload dataset (here replica):
 ```bash
