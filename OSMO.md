@@ -34,6 +34,22 @@ https://docs.google.com/document/d/1CWPEh3JP80KAjp2jyx1D--2UtbdsPpFGHx2vjiQ7qn0/
 ```
 The dashboard for storage can be found [here](https://cssportal.sre.nsv.nvidia.com:4443/user/(userRouter:home). Which is also where you get the stuff for the datasets login.
 
+## Working with a OSMO Dataset
+Check out a datasets files
+```
+osmo dataset inspect isaac_ros_nvblox_tests
+```
+
+Add a new folder to an existing dataset
+```
+osmo dataset update isaac_ros_nvblox_tests --add /home/alex/workspaces/carter-dev/ros_ws/src/
+isaac_ros_nvblox/nvblox_test/test/test_cases/2024_01_31_with_obstacles_cut
+```
+
+Delete some files
+```
+osmo dataset update isaac_ros_nvblox_tests --remove zanker_2_cut/rosbag2_2024_02_01-11_42_39_0.mcap
+```
 # Run OSMO Docker locally
 These commands bring down the docker from NGC so you can test in it.
 
