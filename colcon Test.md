@@ -29,7 +29,11 @@ Run all of our tests
 `colcon test --packages-up-to-regex '.*nvblox.*'`
 ```
 
-Run selected tests. In the example below run `xnvblox_pol`
+Run selected tests. In the example below run `nvblox_pol`
 ```
 colcon test --packages-select nvblox_ros --ctest-args -R nvblox_pol --event-handlers console_direct+
+```
+with pytest
+```
+colcon test --packages-select nvblox_test --pytest-args -k realsense_example --event-handlers console_direct+
 ```

@@ -16,6 +16,10 @@ Upload dataset (here replica):
 osmo dataset upload replica replica
 ```
 
+## Swiftstack web interface
+https://cssportal.sre.nsv.nvidia.com:4443/
+
+
 ## nvblox Image Upload
 Build and upload a docker image
 ```bash
